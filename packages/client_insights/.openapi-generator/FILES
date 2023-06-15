@@ -1,5 +1,4 @@
 .openapi-generator-ignore
-README.md
 lib/algolia_client_insights.dart
 lib/src/api/insights_client.dart
 lib/src/deserialize.dart
