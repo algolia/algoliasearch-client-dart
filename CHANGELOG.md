@@ -3,6 +3,61 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2023-07-20
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`algolia_client_search` - `v0.2.0`](#algolia_client_search---v020)
+ - [`algolia_client_core` - `v0.1.1+4`](#algolia_client_core---v0114)
+ - [`algolia_client_insights` - `v0.1.2`](#algolia_client_insights---v012)
+ - [`algoliasearch` - `v0.1.1+5`](#algoliasearch---v0115)
+
+---
+
+#### `algolia_client_search` - `v0.2.0`
+
+ - **REFACTOR**(dart): remove dart search lite.
+ - **FIX**(scripts): execa command for git commits.
+ - **FEAT**(dart): add playground.
+ - **DOCS**: add migration guide for copyRules/settings/synonyms.
+ - **DOCS**(dart): update changelog formatting.
+ - **DOCS**(guides): delete multiple objects using batch.
+ - **DOCS**: add `manage dictionary entries` guide.
+
+#### `algolia_client_core` - `v0.1.1+4`
+
+ - **REFACTOR**(dart): remove dart search lite.
+ - **FIX**(scripts): execa command for git commits.
+ - **DOCS**(dart): update changelog formatting.
+
+#### `algolia_client_insights` - `v0.1.2`
+
+ - **REFACTOR**(dart): remove dart search lite.
+ - **FIX**(scripts): execa command for git commits.
+ - **FEAT**(dart): add playground.
+ - **DOCS**: add migration guide for copyRules/settings/synonyms.
+ - **DOCS**(dart): update changelog formatting.
+ - **DOCS**(guides): delete multiple objects using batch.
+ - **DOCS**: add `manage dictionary entries` guide.
+
+#### `algoliasearch` - `v0.1.1+5`
+
+ - **REFACTOR**(dart): remove dart search lite.
+ - **FIX**(scripts): execa command for git commits.
+ - **DOCS**: add migration guide for copyRules/settings/synonyms.
+ - **DOCS**(dart): update changelog formatting.
+ - **DOCS**(guides): delete multiple objects using batch.
+ - **DOCS**: add `manage dictionary entries` guide.
+
+
 ## 2023-07-19
 
 ### Changes

@@ -1,3 +1,9 @@
+## 0.1.1+4
+
+ - **REFACTOR**(dart): remove dart search lite.
+ - **FIX**(scripts): execa command for git commits.
+ - **DOCS**(dart): update changelog formatting.
+
 ## 0.1.1+3
 
  - **FIX**(dart): custom calls path and deserialization (#1780).

@@ -1,3 +1,12 @@
+## 0.1.1+5
+
+ - **REFACTOR**(dart): remove dart search lite.
+ - **FIX**(scripts): execa command for git commits.
+ - **DOCS**: add migration guide for copyRules/settings/synonyms.
+ - **DOCS**(dart): update changelog formatting.
+ - **DOCS**(guides): delete multiple objects using batch.
+ - **DOCS**: add `manage dictionary entries` guide.
+
 ## 0.1.1+4
 
  - Update a dependency to the latest release.
