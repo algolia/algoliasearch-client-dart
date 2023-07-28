@@ -37,6 +37,7 @@ lib/src/model/edit.dart
 lib/src/model/edit_type.dart
 lib/src/model/error_base.dart
 lib/src/model/exact_on_single_word_query.dart
+lib/src/model/facet_hits.dart
 lib/src/model/facet_ordering.dart
 lib/src/model/facets.dart
 lib/src/model/facets_stats.dart
@@ -66,6 +67,7 @@ lib/src/model/remove_words_if_no_results.dart
 lib/src/model/rendering_content.dart
 lib/src/model/rule.dart
 lib/src/model/scope_type.dart
+lib/src/model/search_for_facet_values_response.dart
 lib/src/model/search_for_facets.dart
 lib/src/model/search_for_facets_options.dart
 lib/src/model/search_for_hits.dart
