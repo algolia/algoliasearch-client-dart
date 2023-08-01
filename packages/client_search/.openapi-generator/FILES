@@ -1,4 +1,5 @@
 .openapi-generator-ignore
+build.yaml
 lib/algolia_client_search.dart
 lib/src/api/search_client.dart
 lib/src/deserialize.dart
