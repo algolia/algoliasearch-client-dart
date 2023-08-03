@@ -1,0 +1,14 @@
+.openapi-generator-ignore
+build.yaml
+lib/algolia_client_personalization.dart
+lib/src/api/personalization_client.dart
+lib/src/deserialize.dart
+lib/src/model/delete_user_profile_response.dart
+lib/src/model/error_base.dart
+lib/src/model/event_scoring.dart
+lib/src/model/facet_scoring.dart
+lib/src/model/get_user_token_response.dart
+lib/src/model/personalization_strategy_params.dart
+lib/src/model/set_personalization_strategy_response.dart
+lib/src/version.dart
+pubspec.yaml
