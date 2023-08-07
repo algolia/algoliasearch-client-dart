@@ -10,6 +10,7 @@ lib/src/model/advanced_syntax_features.dart
 lib/src/model/alternatives_as_exact.dart
 lib/src/model/anchoring.dart
 lib/src/model/api_key.dart
+lib/src/model/around_precision_from_value_inner.dart
 lib/src/model/around_radius_all.dart
 lib/src/model/assign_user_id_params.dart
 lib/src/model/automatic_facet_filter.dart
