@@ -49,7 +49,6 @@ lib/src/model/highlight_result_option.dart
 lib/src/model/hit.dart
 lib/src/model/index_settings.dart
 lib/src/model/index_settings_as_search_params.dart
-lib/src/model/index_settings_as_search_params_semantic_search.dart
 lib/src/model/languages.dart
 lib/src/model/list_indices_response.dart
 lib/src/model/log_type.dart
@@ -85,6 +84,7 @@ lib/src/model/search_strategy.dart
 lib/src/model/search_synonyms_response.dart
 lib/src/model/search_type_default.dart
 lib/src/model/search_type_facet.dart
+lib/src/model/semantic_search.dart
 lib/src/model/snippet_result_option.dart
 lib/src/model/sort_remaining_by.dart
 lib/src/model/source.dart

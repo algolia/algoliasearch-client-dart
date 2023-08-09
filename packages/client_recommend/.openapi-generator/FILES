@@ -34,7 +34,6 @@ lib/src/model/get_recommendations_params.dart
 lib/src/model/get_recommendations_response.dart
 lib/src/model/highlight_result_option.dart
 lib/src/model/index_settings_as_search_params.dart
-lib/src/model/index_settings_as_search_params_semantic_search.dart
 lib/src/model/match_level.dart
 lib/src/model/matched_geo_location.dart
 lib/src/model/mode.dart
@@ -60,6 +59,7 @@ lib/src/model/search_params_object.dart
 lib/src/model/search_params_query.dart
 lib/src/model/search_recommend_rules_params.dart
 lib/src/model/search_recommend_rules_response.dart
+lib/src/model/semantic_search.dart
 lib/src/model/snippet_result_option.dart
 lib/src/model/sort_remaining_by.dart
 lib/src/model/task_status.dart
