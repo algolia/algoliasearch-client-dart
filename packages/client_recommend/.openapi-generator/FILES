@@ -10,12 +10,13 @@ lib/src/model/around_precision_from_value_inner.dart
 lib/src/model/around_radius_all.dart
 lib/src/model/automatic_facet_filter.dart
 lib/src/model/base_recommend_request.dart
-lib/src/model/base_recommendation_request.dart
+lib/src/model/base_recommendations_query.dart
 lib/src/model/base_search_params.dart
 lib/src/model/base_search_params_without_query.dart
 lib/src/model/base_search_response.dart
 lib/src/model/base_search_response_redirect.dart
-lib/src/model/base_trending_request.dart
+lib/src/model/base_trending_facets_query.dart
+lib/src/model/base_trending_items_query.dart
 lib/src/model/condition.dart
 lib/src/model/consequence.dart
 lib/src/model/consequence_hide.dart
@@ -47,7 +48,7 @@ lib/src/model/recommend_hit.dart
 lib/src/model/recommend_hits.dart
 lib/src/model/recommend_models.dart
 lib/src/model/recommendation_models.dart
-lib/src/model/recommendation_request.dart
+lib/src/model/recommendations_query.dart
 lib/src/model/recommendations_response.dart
 lib/src/model/redirect_rule_index_metadata.dart
 lib/src/model/redirect_rule_index_metadata_data.dart
@@ -63,8 +64,10 @@ lib/src/model/semantic_search.dart
 lib/src/model/snippet_result_option.dart
 lib/src/model/sort_remaining_by.dart
 lib/src/model/task_status.dart
-lib/src/model/trending_models.dart
-lib/src/model/trending_request.dart
+lib/src/model/trending_facets_model.dart
+lib/src/model/trending_facets_query.dart
+lib/src/model/trending_items_model.dart
+lib/src/model/trending_items_query.dart
 lib/src/model/typo_tolerance_enum.dart
 lib/src/model/value.dart
 lib/src/version.dart

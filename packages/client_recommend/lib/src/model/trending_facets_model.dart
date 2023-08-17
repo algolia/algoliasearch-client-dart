@@ -2,21 +2,18 @@
 // ignore_for_file: unused_element
 import 'package:json_annotation/json_annotation.dart';
 
-/// Trending model.
+/// Trending facets model.
 @JsonEnum(valueField: 'raw')
-enum TrendingModels {
-  /// Trending model.
-  facets(r'trending-facets'),
+enum TrendingFacetsModel {
+  /// Trending facets model.
+  trendingFacets(r'trending-facets');
 
-  /// Trending model.
-  items(r'trending-items');
-
-  const TrendingModels(this.raw);
+  const TrendingFacetsModel(this.raw);
   final dynamic raw;
 
   dynamic toJson() => raw;
 
-  static TrendingModels fromJson(dynamic json) {
+  static TrendingFacetsModel fromJson(dynamic json) {
     for (final value in values) {
       if (value.raw == json) return value;
     }

@@ -5,17 +5,14 @@ import 'package:algolia_client_recommend/src/model/search_params_object.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'recommendation_request.g.dart';
+part 'base_recommendations_query.g.dart';
 
 @JsonSerializable()
-final class RecommendationRequest {
-  /// Returns a new [RecommendationRequest] instance.
-  const RecommendationRequest({
+final class BaseRecommendationsQuery {
+  /// Returns a new [BaseRecommendationsQuery] instance.
+  const BaseRecommendationsQuery({
     required this.model,
     required this.objectID,
-    required this.indexName,
-    required this.threshold,
-    this.maxRecommendations,
     this.queryParameters,
     this.fallbackParameters,
   });
@@ -27,20 +24,6 @@ final class RecommendationRequest {
   @JsonKey(name: r'objectID')
   final String objectID;
 
-  /// Algolia index name.
-  @JsonKey(name: r'indexName')
-  final String indexName;
-
-  /// Recommendations with a confidence score lower than `threshold` won't appear in results. > **Note**: Each recommendation has a confidence score of 0 to 100. The closer the score is to 100, the more relevant the recommendations are.
-  // minimum: 0
-  // maximum: 100
-  @JsonKey(name: r'threshold')
-  final int threshold;
-
-  /// Maximum number of recommendations to retrieve. If 0, all recommendations will be returned.
-  @JsonKey(name: r'maxRecommendations')
-  final int? maxRecommendations;
-
   @JsonKey(name: r'queryParameters')
   final SearchParamsObject? queryParameters;
 
@@ -50,12 +33,9 @@ final class RecommendationRequest {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is RecommendationRequest &&
+      other is BaseRecommendationsQuery &&
           other.model == model &&
           other.objectID == objectID &&
-          other.indexName == indexName &&
-          other.threshold == threshold &&
-          other.maxRecommendations == maxRecommendations &&
           other.queryParameters == queryParameters &&
           other.fallbackParameters == fallbackParameters;
 
@@ -63,16 +43,13 @@ final class RecommendationRequest {
   int get hashCode =>
       model.hashCode +
       objectID.hashCode +
-      indexName.hashCode +
-      threshold.hashCode +
-      maxRecommendations.hashCode +
       queryParameters.hashCode +
       fallbackParameters.hashCode;
 
-  factory RecommendationRequest.fromJson(Map<String, dynamic> json) =>
-      _$RecommendationRequestFromJson(json);
+  factory BaseRecommendationsQuery.fromJson(Map<String, dynamic> json) =>
+      _$BaseRecommendationsQueryFromJson(json);
 
-  Map<String, dynamic> toJson() => _$RecommendationRequestToJson(this);
+  Map<String, dynamic> toJson() => _$BaseRecommendationsQueryToJson(this);
 
   @override
   String toString() {

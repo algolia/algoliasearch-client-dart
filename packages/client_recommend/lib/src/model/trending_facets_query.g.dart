@@ -1,18 +1,20 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'base_recommend_request.dart';
+part of 'trending_facets_query.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-BaseRecommendRequest _$BaseRecommendRequestFromJson(
-        Map<String, dynamic> json) =>
+TrendingFacetsQuery _$TrendingFacetsQueryFromJson(Map<String, dynamic> json) =>
     $checkedCreate(
-      'BaseRecommendRequest',
+      'TrendingFacetsQuery',
       json,
       ($checkedConvert) {
-        final val = BaseRecommendRequest(
+        final val = TrendingFacetsQuery(
+          facetName: $checkedConvert('facetName', (v) => v as String),
+          model: $checkedConvert('model',
+              (v) => $enumDecodeNullable(_$TrendingFacetsModelEnumMap, v)),
           indexName: $checkedConvert('indexName', (v) => v as String),
           threshold: $checkedConvert('threshold', (v) => v as int?),
           maxRecommendations:
@@ -22,10 +24,9 @@ BaseRecommendRequest _$BaseRecommendRequestFromJson(
       },
     );
 
-Map<String, dynamic> _$BaseRecommendRequestToJson(
-    BaseRecommendRequest instance) {
+Map<String, dynamic> _$TrendingFacetsQueryToJson(TrendingFacetsQuery instance) {
   final val = <String, dynamic>{
-    'indexName': instance.indexName,
+    'facetName': instance.facetName,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -34,7 +35,13 @@ Map<String, dynamic> _$BaseRecommendRequestToJson(
     }
   }
 
+  writeNotNull('model', instance.model?.toJson());
+  val['indexName'] = instance.indexName;
   writeNotNull('threshold', instance.threshold);
   writeNotNull('maxRecommendations', instance.maxRecommendations);
   return val;
 }
+
+const _$TrendingFacetsModelEnumMap = {
+  TrendingFacetsModel.trendingFacets: 'trending-facets',
+};

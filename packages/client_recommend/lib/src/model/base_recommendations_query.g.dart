@@ -1,25 +1,21 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'recommendation_request.dart';
+part of 'base_recommendations_query.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-RecommendationRequest _$RecommendationRequestFromJson(
+BaseRecommendationsQuery _$BaseRecommendationsQueryFromJson(
         Map<String, dynamic> json) =>
     $checkedCreate(
-      'RecommendationRequest',
+      'BaseRecommendationsQuery',
       json,
       ($checkedConvert) {
-        final val = RecommendationRequest(
+        final val = BaseRecommendationsQuery(
           model: $checkedConvert(
               'model', (v) => $enumDecode(_$RecommendationModelsEnumMap, v)),
           objectID: $checkedConvert('objectID', (v) => v as String),
-          indexName: $checkedConvert('indexName', (v) => v as String),
-          threshold: $checkedConvert('threshold', (v) => v as int),
-          maxRecommendations:
-              $checkedConvert('maxRecommendations', (v) => v as int?),
           queryParameters: $checkedConvert(
               'queryParameters',
               (v) => v == null
@@ -35,13 +31,11 @@ RecommendationRequest _$RecommendationRequestFromJson(
       },
     );
 
-Map<String, dynamic> _$RecommendationRequestToJson(
-    RecommendationRequest instance) {
+Map<String, dynamic> _$BaseRecommendationsQueryToJson(
+    BaseRecommendationsQuery instance) {
   final val = <String, dynamic>{
     'model': instance.model.toJson(),
     'objectID': instance.objectID,
-    'indexName': instance.indexName,
-    'threshold': instance.threshold,
   };
 
   void writeNotNull(String key, dynamic value) {
@@ -50,7 +44,6 @@ Map<String, dynamic> _$RecommendationRequestToJson(
     }
   }
 
-  writeNotNull('maxRecommendations', instance.maxRecommendations);
   writeNotNull('queryParameters', instance.queryParameters?.toJson());
   writeNotNull('fallbackParameters', instance.fallbackParameters?.toJson());
   return val;
