@@ -20,7 +20,6 @@ lib/src/model/base_index_settings.dart
 lib/src/model/base_search_params.dart
 lib/src/model/base_search_params_without_query.dart
 lib/src/model/base_search_response.dart
-lib/src/model/base_search_response_redirect.dart
 lib/src/model/batch_assign_user_ids_params.dart
 lib/src/model/batch_dictionary_entries_params.dart
 lib/src/model/batch_dictionary_entries_request.dart
@@ -53,6 +52,7 @@ lib/src/model/edit.dart
 lib/src/model/edit_type.dart
 lib/src/model/error_base.dart
 lib/src/model/exact_on_single_word_query.dart
+lib/src/model/exhaustive.dart
 lib/src/model/facet_hits.dart
 lib/src/model/facet_ordering.dart
 lib/src/model/facets.dart
@@ -92,6 +92,7 @@ lib/src/model/promote_object_id.dart
 lib/src/model/promote_object_ids.dart
 lib/src/model/query_type.dart
 lib/src/model/ranking_info.dart
+lib/src/model/redirect.dart
 lib/src/model/redirect_rule_index_metadata.dart
 lib/src/model/redirect_rule_index_metadata_data.dart
 lib/src/model/remove_user_id_response.dart

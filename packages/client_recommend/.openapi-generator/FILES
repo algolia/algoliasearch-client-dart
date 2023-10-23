@@ -15,7 +15,6 @@ lib/src/model/base_recommendations_query.dart
 lib/src/model/base_search_params.dart
 lib/src/model/base_search_params_without_query.dart
 lib/src/model/base_search_response.dart
-lib/src/model/base_search_response_redirect.dart
 lib/src/model/base_trending_facets_query.dart
 lib/src/model/base_trending_items_query.dart
 lib/src/model/condition.dart
@@ -28,6 +27,7 @@ lib/src/model/edit.dart
 lib/src/model/edit_type.dart
 lib/src/model/error_base.dart
 lib/src/model/exact_on_single_word_query.dart
+lib/src/model/exhaustive.dart
 lib/src/model/facet_ordering.dart
 lib/src/model/facets.dart
 lib/src/model/facets_stats.dart
@@ -51,6 +51,7 @@ lib/src/model/recommend_models.dart
 lib/src/model/recommendation_models.dart
 lib/src/model/recommendations_query.dart
 lib/src/model/recommendations_response.dart
+lib/src/model/redirect.dart
 lib/src/model/redirect_rule_index_metadata.dart
 lib/src/model/redirect_rule_index_metadata_data.dart
 lib/src/model/remove_words_if_no_results.dart
