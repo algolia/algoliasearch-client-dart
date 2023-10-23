@@ -17,6 +17,8 @@ lib/src/model/converted_object_ids.dart
 lib/src/model/converted_object_ids_after_search.dart
 lib/src/model/error_base.dart
 lib/src/model/events_response.dart
+lib/src/model/identify.dart
+lib/src/model/identify_event.dart
 lib/src/model/insights_events.dart
 lib/src/model/object_data.dart
 lib/src/model/object_data_after_search.dart
