@@ -2,18 +2,17 @@
 // ignore_for_file: unused_element
 import 'package:algolia_client_recommend/src/model/exhaustive.dart';
 import 'package:algolia_client_recommend/src/model/facets_stats.dart';
-import 'package:algolia_client_recommend/src/model/recommend_hit.dart';
 import 'package:algolia_client_recommend/src/model/redirect.dart';
 import 'package:algolia_client_recommend/src/model/rendering_content.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'recommendations_response.g.dart';
+part 'recommendations_results.g.dart';
 
 @JsonSerializable()
-final class RecommendationsResponse {
-  /// Returns a new [RecommendationsResponse] instance.
-  const RecommendationsResponse({
+final class RecommendationsResults {
+  /// Returns a new [RecommendationsResults] instance.
+  const RecommendationsResults({
     this.abTestID,
     this.abTestVariantID,
     this.aroundLatLng,
@@ -157,8 +156,11 @@ final class RecommendationsResponse {
   @JsonKey(name: r'userData')
   final Object? userData;
 
+  /// One of types:
+  /// - [RecommendHit]
+  /// - [TrendingFacetHit]
   @JsonKey(name: r'hits')
-  final List<RecommendHit> hits;
+  final Iterable<dynamic> hits;
 
   /// Text to search for in an index.
   @JsonKey(name: r'query')
@@ -171,7 +173,7 @@ final class RecommendationsResponse {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is RecommendationsResponse &&
+      other is RecommendationsResults &&
           other.abTestID == abTestID &&
           other.abTestVariantID == abTestVariantID &&
           other.aroundLatLng == aroundLatLng &&
@@ -230,10 +232,10 @@ final class RecommendationsResponse {
       query.hashCode +
       params.hashCode;
 
-  factory RecommendationsResponse.fromJson(Map<String, dynamic> json) =>
-      _$RecommendationsResponseFromJson(json);
+  factory RecommendationsResults.fromJson(Map<String, dynamic> json) =>
+      _$RecommendationsResultsFromJson(json);
 
-  Map<String, dynamic> toJson() => _$RecommendationsResponseToJson(this);
+  Map<String, dynamic> toJson() => _$RecommendationsResultsToJson(this);
 
   @override
   String toString() {

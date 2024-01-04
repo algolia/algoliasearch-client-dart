@@ -1,18 +1,18 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'recommendations_response.dart';
+part of 'recommendations_results.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-RecommendationsResponse _$RecommendationsResponseFromJson(
+RecommendationsResults _$RecommendationsResultsFromJson(
         Map<String, dynamic> json) =>
     $checkedCreate(
-      'RecommendationsResponse',
+      'RecommendationsResults',
       json,
       ($checkedConvert) {
-        final val = RecommendationsResponse(
+        final val = RecommendationsResults(
           abTestID: $checkedConvert('abTestID', (v) => v as int?),
           abTestVariantID: $checkedConvert('abTestVariantID', (v) => v as int?),
           aroundLatLng: $checkedConvert('aroundLatLng', (v) => v as String?),
@@ -66,11 +66,7 @@ RecommendationsResponse _$RecommendationsResponseFromJson(
           serverTimeMS: $checkedConvert('serverTimeMS', (v) => v as int?),
           serverUsed: $checkedConvert('serverUsed', (v) => v as String?),
           userData: $checkedConvert('userData', (v) => v),
-          hits: $checkedConvert(
-              'hits',
-              (v) => (v as List<dynamic>)
-                  .map((e) => RecommendHit.fromJson(e as Map<String, dynamic>))
-                  .toList()),
+          hits: $checkedConvert('hits', (v) => v as List<dynamic>),
           query: $checkedConvert('query', (v) => v as String?),
           params: $checkedConvert('params', (v) => v as String?),
         );
@@ -79,8 +75,8 @@ RecommendationsResponse _$RecommendationsResponseFromJson(
       fieldKeyMap: const {'facetsStats': 'facets_stats'},
     );
 
-Map<String, dynamic> _$RecommendationsResponseToJson(
-    RecommendationsResponse instance) {
+Map<String, dynamic> _$RecommendationsResultsToJson(
+    RecommendationsResults instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -117,7 +113,7 @@ Map<String, dynamic> _$RecommendationsResponseToJson(
   writeNotNull('serverTimeMS', instance.serverTimeMS);
   writeNotNull('serverUsed', instance.serverUsed);
   writeNotNull('userData', instance.userData);
-  val['hits'] = instance.hits.map((e) => e.toJson()).toList();
+  val['hits'] = instance.hits.toList();
   writeNotNull('query', instance.query);
   writeNotNull('params', instance.params);
   return val;

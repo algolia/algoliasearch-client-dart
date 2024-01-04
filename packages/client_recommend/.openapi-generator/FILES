@@ -12,6 +12,8 @@ lib/src/model/around_radius_all.dart
 lib/src/model/automatic_facet_filter.dart
 lib/src/model/base_recommend_request.dart
 lib/src/model/base_recommendations_query.dart
+lib/src/model/base_recommended_for_you_query.dart
+lib/src/model/base_recommended_for_you_query_parameters.dart
 lib/src/model/base_search_params.dart
 lib/src/model/base_search_params_without_query.dart
 lib/src/model/base_search_response.dart
@@ -46,11 +48,14 @@ lib/src/model/promote_object_ids.dart
 lib/src/model/query_type.dart
 lib/src/model/ranking_info.dart
 lib/src/model/recommend_hit.dart
-lib/src/model/recommend_hits.dart
 lib/src/model/recommend_models.dart
 lib/src/model/recommendation_models.dart
+lib/src/model/recommendations_hits.dart
 lib/src/model/recommendations_query.dart
-lib/src/model/recommendations_response.dart
+lib/src/model/recommendations_results.dart
+lib/src/model/recommended_for_you_model.dart
+lib/src/model/recommended_for_you_query.dart
+lib/src/model/recommended_for_you_query_parameters.dart
 lib/src/model/redirect.dart
 lib/src/model/redirect_rule_index_metadata.dart
 lib/src/model/redirect_rule_index_metadata_data.dart
@@ -66,6 +71,7 @@ lib/src/model/semantic_search.dart
 lib/src/model/snippet_result_option.dart
 lib/src/model/sort_remaining_by.dart
 lib/src/model/task_status.dart
+lib/src/model/trending_facet_hit.dart
 lib/src/model/trending_facets_model.dart
 lib/src/model/trending_facets_query.dart
 lib/src/model/trending_items_model.dart

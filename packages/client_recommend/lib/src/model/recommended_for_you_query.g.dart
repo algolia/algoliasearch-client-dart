@@ -1,42 +1,43 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'recommendations_query.dart';
+part of 'recommended_for_you_query.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-RecommendationsQuery _$RecommendationsQueryFromJson(
+RecommendedForYouQuery _$RecommendedForYouQueryFromJson(
         Map<String, dynamic> json) =>
     $checkedCreate(
-      'RecommendationsQuery',
+      'RecommendedForYouQuery',
       json,
       ($checkedConvert) {
-        final val = RecommendationsQuery(
+        final val = RecommendedForYouQuery(
           indexName: $checkedConvert('indexName', (v) => v as String),
           threshold: $checkedConvert('threshold', (v) => v as int?),
           maxRecommendations:
               $checkedConvert('maxRecommendations', (v) => v as int?),
           model: $checkedConvert(
-              'model', (v) => $enumDecode(_$RecommendationModelsEnumMap, v)),
-          objectID: $checkedConvert('objectID', (v) => v as String),
+              'model', (v) => $enumDecode(_$RecommendedForYouModelEnumMap, v)),
           queryParameters: $checkedConvert(
               'queryParameters',
               (v) => v == null
                   ? null
-                  : SearchParamsObject.fromJson(v as Map<String, dynamic>)),
+                  : RecommendedForYouQueryParameters.fromJson(
+                      v as Map<String, dynamic>)),
           fallbackParameters: $checkedConvert(
               'fallbackParameters',
               (v) => v == null
                   ? null
-                  : SearchParamsObject.fromJson(v as Map<String, dynamic>)),
+                  : RecommendedForYouQueryParameters.fromJson(
+                      v as Map<String, dynamic>)),
         );
         return val;
       },
     );
 
-Map<String, dynamic> _$RecommendationsQueryToJson(
-    RecommendationsQuery instance) {
+Map<String, dynamic> _$RecommendedForYouQueryToJson(
+    RecommendedForYouQuery instance) {
   final val = <String, dynamic>{
     'indexName': instance.indexName,
   };
@@ -50,13 +51,11 @@ Map<String, dynamic> _$RecommendationsQueryToJson(
   writeNotNull('threshold', instance.threshold);
   writeNotNull('maxRecommendations', instance.maxRecommendations);
   val['model'] = instance.model.toJson();
-  val['objectID'] = instance.objectID;
   writeNotNull('queryParameters', instance.queryParameters?.toJson());
   writeNotNull('fallbackParameters', instance.fallbackParameters?.toJson());
   return val;
 }
 
-const _$RecommendationModelsEnumMap = {
-  RecommendationModels.relatedProducts: 'related-products',
-  RecommendationModels.boughtTogether: 'bought-together',
+const _$RecommendedForYouModelEnumMap = {
+  RecommendedForYouModel.recommendedForYou: 'recommended-for-you',
 };
