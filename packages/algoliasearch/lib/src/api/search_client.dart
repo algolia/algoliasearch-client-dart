@@ -44,6 +44,7 @@ final class SearchClient implements ApiClient {
     assert(apiKey.isNotEmpty, '`apiKey` is missing.');
   }
 
+  /// Send requests to the Algolia REST API.
   /// This method allow you to send requests to the Algolia REST API.
   ///
   /// Parameters:
@@ -80,10 +81,8 @@ final class SearchClient implements ApiClient {
     );
   }
 
+  /// Search multiple indices.
   /// Send multiple search queries to one or more indices.
-  ///
-  /// Required API Key ACLs:
-  ///   - search
   ///
   /// Parameters:
   /// * [searchMethodParams] Query requests and strategies. Results will be received in the same order as the queries.

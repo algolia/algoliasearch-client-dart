@@ -49,6 +49,7 @@ final class RecommendClient implements ApiClient {
     assert(apiKey.isNotEmpty, '`apiKey` is missing.');
   }
 
+  /// Send requests to the Algolia REST API.
   /// This method allow you to send requests to the Algolia REST API.
   ///
   /// Parameters:
@@ -82,6 +83,7 @@ final class RecommendClient implements ApiClient {
     );
   }
 
+  /// Send requests to the Algolia REST API.
   /// This method allow you to send requests to the Algolia REST API.
   ///
   /// Parameters:
@@ -115,6 +117,7 @@ final class RecommendClient implements ApiClient {
     );
   }
 
+  /// Send requests to the Algolia REST API.
   /// This method allow you to send requests to the Algolia REST API.
   ///
   /// Parameters:
@@ -151,6 +154,7 @@ final class RecommendClient implements ApiClient {
     );
   }
 
+  /// Send requests to the Algolia REST API.
   /// This method allow you to send requests to the Algolia REST API.
   ///
   /// Parameters:
@@ -187,10 +191,8 @@ final class RecommendClient implements ApiClient {
     );
   }
 
+  /// Delete a Recommend rule.
   /// Delete a [Recommend rule](https://www.algolia.com/doc/guides/algolia-recommend/how-to/rules/).
-  ///
-  /// Required API Key ACLs:
-  ///   - editSettings
   ///
   /// Parameters:
   /// * [indexName] Index on which to perform the request.
@@ -231,10 +233,8 @@ final class RecommendClient implements ApiClient {
     );
   }
 
+  /// Get a Recommend rule.
   /// Return a [Recommend rule](https://www.algolia.com/doc/guides/algolia-recommend/how-to/rules/).
-  ///
-  /// Required API Key ACLs:
-  ///   - settings
   ///
   /// Parameters:
   /// * [indexName] Index on which to perform the request.
@@ -275,10 +275,8 @@ final class RecommendClient implements ApiClient {
     );
   }
 
+  /// Get a Recommend task's status.
   /// Some operations, such as deleting a Recommend rule, will respond with a `taskID` value. Use this value here to check the status of that task.
-  ///
-  /// Required API Key ACLs:
-  ///   - editSettings
   ///
   /// Parameters:
   /// * [indexName] Index on which to perform the request.
@@ -315,10 +313,8 @@ final class RecommendClient implements ApiClient {
     );
   }
 
+  /// Get recommendations and trending items.
   /// Returns results from either recommendation or trending models:    - **Recommendations** are provided by the [Related Products](https://www.algolia.com/doc/guides/algolia-recommend/overview/#related-products-and-related-content) and [Frequently Bought Together](https://www.algolia.com/doc/guides/algolia-recommend/overview/#frequently-bought-together) models   - **Trending** models are [Trending Items and Trending Facet Values](https://www.algolia.com/doc/guides/algolia-recommend/overview/#trending-items-and-trending-facet-values).
-  ///
-  /// Required API Key ACLs:
-  ///   - search
   ///
   /// Parameters:
   /// * [getRecommendationsParams]
@@ -344,10 +340,8 @@ final class RecommendClient implements ApiClient {
     );
   }
 
+  /// List Recommend rules.
   /// List [Recommend rules](https://www.algolia.com/doc/guides/algolia-recommend/how-to/rules/).
-  ///
-  /// Required API Key ACLs:
-  ///   - settings
   ///
   /// Parameters:
   /// * [indexName] Index on which to perform the request.
