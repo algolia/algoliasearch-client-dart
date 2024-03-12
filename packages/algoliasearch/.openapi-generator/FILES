@@ -71,6 +71,7 @@ lib/src/model/remove_words_if_no_results.dart
 lib/src/model/rendering_content.dart
 lib/src/model/rule.dart
 lib/src/model/scope_type.dart
+lib/src/model/search_dictionary_entries_response.dart
 lib/src/model/search_for_facet_values_response.dart
 lib/src/model/search_for_facets.dart
 lib/src/model/search_for_facets_options.dart
