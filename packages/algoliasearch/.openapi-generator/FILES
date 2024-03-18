@@ -94,6 +94,7 @@ lib/src/model/snippet_result_option.dart
 lib/src/model/sort_remaining_by.dart
 lib/src/model/source.dart
 lib/src/model/standard_entries.dart
+lib/src/model/supported_language.dart
 lib/src/model/synonym_hit.dart
 lib/src/model/synonym_type.dart
 lib/src/model/task_status.dart

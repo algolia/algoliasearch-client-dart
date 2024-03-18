@@ -70,6 +70,7 @@ lib/src/model/search_recommend_rules_response.dart
 lib/src/model/semantic_search.dart
 lib/src/model/snippet_result_option.dart
 lib/src/model/sort_remaining_by.dart
+lib/src/model/supported_language.dart
 lib/src/model/task_status.dart
 lib/src/model/trending_facet_hit.dart
 lib/src/model/trending_facets_model.dart
