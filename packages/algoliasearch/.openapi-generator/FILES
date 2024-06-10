@@ -20,6 +20,7 @@ lib/src/model/base_index_settings.dart
 lib/src/model/base_search_params.dart
 lib/src/model/base_search_params_without_query.dart
 lib/src/model/base_search_response.dart
+lib/src/model/batch_response.dart
 lib/src/model/browse_params_object.dart
 lib/src/model/browse_response.dart
 lib/src/model/built_in_operation.dart
@@ -69,6 +70,7 @@ lib/src/model/redirect_rule_index_metadata.dart
 lib/src/model/redirect_rule_index_metadata_data.dart
 lib/src/model/remove_words_if_no_results.dart
 lib/src/model/rendering_content.dart
+lib/src/model/replace_all_objects_response.dart
 lib/src/model/rule.dart
 lib/src/model/scope_type.dart
 lib/src/model/search_dictionary_entries_response.dart
@@ -100,6 +102,7 @@ lib/src/model/synonym_type.dart
 lib/src/model/task_status.dart
 lib/src/model/time_range.dart
 lib/src/model/typo_tolerance_enum.dart
+lib/src/model/updated_at_response.dart
 lib/src/model/updated_rule_response.dart
 lib/src/model/user_id.dart
 lib/src/model/value.dart
