@@ -1,17 +1,17 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'search_for_hits.dart';
+part of 'search_params.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-SearchForHits _$SearchForHitsFromJson(Map<String, dynamic> json) =>
+SearchParams _$SearchParamsFromJson(Map<String, dynamic> json) =>
     $checkedCreate(
-      'SearchForHits',
+      'SearchParams',
       json,
       ($checkedConvert) {
-        final val = SearchForHits(
+        final val = SearchParams(
           query: $checkedConvert('query', (v) => v as String?),
           similarQuery: $checkedConvert('similarQuery', (v) => v as String?),
           filters: $checkedConvert('filters', (v) => v as String?),
@@ -169,15 +169,12 @@ SearchForHits _$SearchForHitsFromJson(Map<String, dynamic> json) =>
               $checkedConvert('enableReRanking', (v) => v as bool?),
           reRankingApplyFilter:
               $checkedConvert('reRankingApplyFilter', (v) => v),
-          indexName: $checkedConvert('indexName', (v) => v as String),
-          type: $checkedConvert('type',
-              (v) => $enumDecodeNullable(_$SearchTypeDefaultEnumMap, v)),
         );
         return val;
       },
     );
 
-Map<String, dynamic> _$SearchForHitsToJson(SearchForHits instance) {
+Map<String, dynamic> _$SearchParamsToJson(SearchParams instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -274,8 +271,6 @@ Map<String, dynamic> _$SearchForHitsToJson(SearchForHits instance) {
   writeNotNull('renderingContent', instance.renderingContent?.toJson());
   writeNotNull('enableReRanking', instance.enableReRanking);
   writeNotNull('reRankingApplyFilter', instance.reRankingApplyFilter);
-  val['indexName'] = instance.indexName;
-  writeNotNull('type', instance.type?.toJson());
   return val;
 }
 
@@ -383,8 +378,4 @@ const _$AlternativesAsExactEnumMap = {
 const _$AdvancedSyntaxFeaturesEnumMap = {
   AdvancedSyntaxFeatures.exactPhrase: 'exactPhrase',
   AdvancedSyntaxFeatures.excludeWords: 'excludeWords',
-};
-
-const _$SearchTypeDefaultEnumMap = {
-  SearchTypeDefault.default_: 'default',
 };

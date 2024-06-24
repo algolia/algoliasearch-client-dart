@@ -3,7 +3,6 @@
 import 'package:algoliasearch/src/model/advanced_syntax_features.dart';
 import 'package:algoliasearch/src/model/supported_language.dart';
 import 'package:algoliasearch/src/model/rendering_content.dart';
-import 'package:algoliasearch/src/model/search_type_default.dart';
 import 'package:algoliasearch/src/model/remove_words_if_no_results.dart';
 import 'package:algoliasearch/src/model/query_type.dart';
 import 'package:algoliasearch/src/model/exact_on_single_word_query.dart';
@@ -13,12 +12,12 @@ import 'package:algoliasearch/src/model/alternatives_as_exact.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'search_for_hits.g.dart';
+part 'search_params.g.dart';
 
 @JsonSerializable()
-final class SearchForHits {
-  /// Returns a new [SearchForHits] instance.
-  const SearchForHits({
+final class SearchParams {
+  /// Returns a new [SearchParams] instance.
+  const SearchParams({
     this.query,
     this.similarQuery,
     this.filters,
@@ -95,8 +94,6 @@ final class SearchForHits {
     this.renderingContent,
     this.enableReRanking,
     this.reRankingApplyFilter,
-    required this.indexName,
-    this.type,
   });
 
   /// Search query.
@@ -436,17 +433,10 @@ final class SearchForHits {
   @JsonKey(name: r'reRankingApplyFilter')
   final dynamic reRankingApplyFilter;
 
-  /// Index name (case-sensitive).
-  @JsonKey(name: r'indexName')
-  final String indexName;
-
-  @JsonKey(name: r'type')
-  final SearchTypeDefault? type;
-
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is SearchForHits &&
+      other is SearchParams &&
           other.query == query &&
           other.similarQuery == similarQuery &&
           other.filters == filters &&
@@ -525,9 +515,7 @@ final class SearchForHits {
               attributeCriteriaComputedByMinProximity &&
           other.renderingContent == renderingContent &&
           other.enableReRanking == enableReRanking &&
-          other.reRankingApplyFilter == reRankingApplyFilter &&
-          other.indexName == indexName &&
-          other.type == type;
+          other.reRankingApplyFilter == reRankingApplyFilter;
 
   @override
   int get hashCode =>
@@ -606,14 +594,12 @@ final class SearchForHits {
       attributeCriteriaComputedByMinProximity.hashCode +
       renderingContent.hashCode +
       enableReRanking.hashCode +
-      (reRankingApplyFilter == null ? 0 : reRankingApplyFilter.hashCode) +
-      indexName.hashCode +
-      type.hashCode;
+      (reRankingApplyFilter == null ? 0 : reRankingApplyFilter.hashCode);
 
-  factory SearchForHits.fromJson(Map<String, dynamic> json) =>
-      _$SearchForHitsFromJson(json);
+  factory SearchParams.fromJson(Map<String, dynamic> json) =>
+      _$SearchParamsFromJson(json);
 
-  Map<String, dynamic> toJson() => _$SearchForHitsToJson(this);
+  Map<String, dynamic> toJson() => _$SearchParamsToJson(this);
 
   @override
   String toString() {
