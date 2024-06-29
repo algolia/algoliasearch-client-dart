@@ -34,7 +34,7 @@ final class ClientOptions {
   /// Used only in case of using the default (dio) requester.
   final Iterable<Interceptor>? interceptors;
 
-  /// Custom HttpClientAdapter used to send HTTP requests.
+  /// Custom [HttpClientAdapter] used to send HTTP requests.
   /// Used only in case of using the default (dio) requester.
   final HttpClientAdapter? httpClientAdapter;
 
