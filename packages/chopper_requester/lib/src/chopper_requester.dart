@@ -93,7 +93,7 @@ class ChopperRequester implements Requester {
         for (final MapEntry<String, dynamic> entry
             in request.headers?.entries ?? const {})
           entry.key: entry.value.toString(),
-        if (request.body != null) 'Content-Type': 'application/json',
+        if (request.body != null) 'content-type': 'application/json',
       },
     );
 
