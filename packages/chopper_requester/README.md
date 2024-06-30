@@ -26,7 +26,6 @@ final SearchClient _client = SearchClient(
   appId: appId,
   apiKey: apiKey,
   options: ClientOptions(
-    connectTimeout: const Duration(seconds: 30),
     requester: ChopperRequester(
       appId: appId,
       apiKey: apiKey,
@@ -44,6 +43,8 @@ Future<SearchResponse> search(String query) => _client.searchIndex(
 ```
 
 You can configure the `ChopperRequester` with the following parameters:
+
+### Configuration
 
 ```dart
 final requester = ChopperRequester({
@@ -63,6 +64,52 @@ final requester = ChopperRequester({
   Client? client
 });
 ```
+
+### Advanced Usage
+
+To set the connect timeout one has to do that directly on the `Client`, i.e.
+
+```dart
+final requester = ChopperRequester(
+  appId: appId,
+  apiKey: apiKey,
+  client: http.IOClient(
+    HttpClient()..connectionTimeout = const Duration(seconds: 60),
+  ),
+);
+```
+
+### Custom Interceptors
+
+For interceptors please see the [Chopper documentation](https://hadrien-lejard.gitbook.io/chopper/interceptors).
+
+### Custom Clients
+
+Via the `client` option users can use platform specific HTTP clients such:
+- [cronet_http](https://pub.dev/packages/cronet_http) on Android
+  ```dart
+  final requester = ChopperRequester(
+    appId: appId,
+    apiKey: apiKey,
+    client: CronetClient.fromCronetEngine(
+      CronetEngine.build(
+        cacheMode: CacheMode.memory,
+        cacheMaxSize: 50 * 1024 * 1024,
+      ),
+      closeEngine: true,
+    ),
+  );
+  ```
+- [cupertino_http](https://pub.dev/packages/cupertino_http) on iOS/macOS
+  ```dart
+  final requester = ChopperRequester(
+    appId: appId,
+    apiKey: apiKey,
+    client: CupertinoClient.fromSessionConfiguration(
+      URLSessionConfiguration.defaultSessionConfiguration(),
+    ),
+  );
+  ```
 
 ## License
 
