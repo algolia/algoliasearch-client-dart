@@ -106,7 +106,8 @@ Via the `client` option users can use platform specific HTTP clients such:
     appId: appId,
     apiKey: apiKey,
     client: CupertinoClient.fromSessionConfiguration(
-      URLSessionConfiguration.defaultSessionConfiguration(),
+      (URLSessionConfiguration.defaultSessionConfiguration()
+          ..timeoutIntervalForRequest = const Duration(seconds: 30)),
     ),
   );
   ```
