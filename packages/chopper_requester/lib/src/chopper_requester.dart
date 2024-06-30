@@ -22,7 +22,6 @@ class ChopperRequester implements Requester {
     required String appId,
     required String apiKey,
     Map<String, dynamic>? headers,
-    Duration? connectTimeout,
     Iterable<AgentSegment>? clientSegments,
     Logger? logger,
     Iterable<Interceptor>? interceptors,

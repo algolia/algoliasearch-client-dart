@@ -53,8 +53,6 @@ final requester = ChopperRequester({
   required String apiKey,
   /// Additional headers to send with the request
   Map<String, dynamic>? headers,
-  /// The duration to wait before timing out the request
-  Duration? connectTimeout,
   /// The segments to include in the `User-Agent` header
   Iterable<AgentSegment>? clientSegments,
   /// The logger to use for debugging
