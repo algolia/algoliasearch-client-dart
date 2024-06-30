@@ -1,5 +1,4 @@
 import 'dart:async' show TimeoutException;
-import 'dart:convert' show jsonEncode;
 
 import 'package:algolia_client_core/algolia_client_core.dart';
 import 'package:chopper/chopper.dart';
@@ -87,7 +86,7 @@ class ChopperRequester implements Requester {
         path: request.path,
       ),
       _client.baseUrl,
-      body: jsonEncode(request.body),
+      body: request.body,
       parameters: request.queryParameters,
       headers: {
         for (final MapEntry<String, dynamic> entry
