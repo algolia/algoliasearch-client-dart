@@ -1,18 +1,16 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'around_precision_from_value_inner.dart';
+part of 'range.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-AroundPrecisionFromValueInner _$AroundPrecisionFromValueInnerFromJson(
-        Map<String, dynamic> json) =>
-    $checkedCreate(
-      'AroundPrecisionFromValueInner',
+Range _$RangeFromJson(Map<String, dynamic> json) => $checkedCreate(
+      'Range',
       json,
       ($checkedConvert) {
-        final val = AroundPrecisionFromValueInner(
+        final val = Range(
           from: $checkedConvert('from', (v) => (v as num?)?.toInt()),
           value: $checkedConvert('value', (v) => (v as num?)?.toInt()),
         );
@@ -20,8 +18,7 @@ AroundPrecisionFromValueInner _$AroundPrecisionFromValueInnerFromJson(
       },
     );
 
-Map<String, dynamic> _$AroundPrecisionFromValueInnerToJson(
-    AroundPrecisionFromValueInner instance) {
+Map<String, dynamic> _$RangeToJson(Range instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

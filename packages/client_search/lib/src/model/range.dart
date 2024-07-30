@@ -3,12 +3,12 @@
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'around_precision_from_value_inner.g.dart';
+part 'range.g.dart';
 
 @JsonSerializable()
-final class AroundPrecisionFromValueInner {
-  /// Returns a new [AroundPrecisionFromValueInner] instance.
-  const AroundPrecisionFromValueInner({
+final class Range {
+  /// Returns a new [Range] instance.
+  const Range({
     this.from,
     this.value,
   });
@@ -24,17 +24,14 @@ final class AroundPrecisionFromValueInner {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is AroundPrecisionFromValueInner &&
-          other.from == from &&
-          other.value == value;
+      other is Range && other.from == from && other.value == value;
 
   @override
   int get hashCode => from.hashCode + value.hashCode;
 
-  factory AroundPrecisionFromValueInner.fromJson(Map<String, dynamic> json) =>
-      _$AroundPrecisionFromValueInnerFromJson(json);
+  factory Range.fromJson(Map<String, dynamic> json) => _$RangeFromJson(json);
 
-  Map<String, dynamic> toJson() => _$AroundPrecisionFromValueInnerToJson(this);
+  Map<String, dynamic> toJson() => _$RangeToJson(this);
 
   @override
   String toString() {

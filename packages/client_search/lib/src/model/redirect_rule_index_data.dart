@@ -3,12 +3,12 @@
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'redirect_rule_index_metadata_data.g.dart';
+part 'redirect_rule_index_data.g.dart';
 
 @JsonSerializable()
-final class RedirectRuleIndexMetadataData {
-  /// Returns a new [RedirectRuleIndexMetadataData] instance.
-  const RedirectRuleIndexMetadataData({
+final class RedirectRuleIndexData {
+  /// Returns a new [RedirectRuleIndexData] instance.
+  const RedirectRuleIndexData({
     required this.ruleObjectID,
   });
 
@@ -18,16 +18,15 @@ final class RedirectRuleIndexMetadataData {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is RedirectRuleIndexMetadataData &&
-          other.ruleObjectID == ruleObjectID;
+      other is RedirectRuleIndexData && other.ruleObjectID == ruleObjectID;
 
   @override
   int get hashCode => ruleObjectID.hashCode;
 
-  factory RedirectRuleIndexMetadataData.fromJson(Map<String, dynamic> json) =>
-      _$RedirectRuleIndexMetadataDataFromJson(json);
+  factory RedirectRuleIndexData.fromJson(Map<String, dynamic> json) =>
+      _$RedirectRuleIndexDataFromJson(json);
 
-  Map<String, dynamic> toJson() => _$RedirectRuleIndexMetadataDataToJson(this);
+  Map<String, dynamic> toJson() => _$RedirectRuleIndexDataToJson(this);
 
   @override
   String toString() {

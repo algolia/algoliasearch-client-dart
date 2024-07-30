@@ -1,26 +1,24 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'recommend_rule_metadata.dart';
+part of 'rule_metadata.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-RecommendRuleMetadata _$RecommendRuleMetadataFromJson(
-        Map<String, dynamic> json) =>
+RuleMetadata _$RuleMetadataFromJson(Map<String, dynamic> json) =>
     $checkedCreate(
-      'RecommendRuleMetadata',
+      'RuleMetadata',
       json,
       ($checkedConvert) {
-        final val = RecommendRuleMetadata(
+        final val = RuleMetadata(
           lastUpdate: $checkedConvert('lastUpdate', (v) => v as String?),
         );
         return val;
       },
     );
 
-Map<String, dynamic> _$RecommendRuleMetadataToJson(
-    RecommendRuleMetadata instance) {
+Map<String, dynamic> _$RuleMetadataToJson(RuleMetadata instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {

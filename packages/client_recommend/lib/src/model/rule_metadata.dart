@@ -3,12 +3,12 @@
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'recommend_rule_metadata.g.dart';
+part 'rule_metadata.g.dart';
 
 @JsonSerializable()
-final class RecommendRuleMetadata {
-  /// Returns a new [RecommendRuleMetadata] instance.
-  const RecommendRuleMetadata({
+final class RuleMetadata {
+  /// Returns a new [RuleMetadata] instance.
+  const RuleMetadata({
     this.lastUpdate,
   });
 
@@ -19,15 +19,15 @@ final class RecommendRuleMetadata {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is RecommendRuleMetadata && other.lastUpdate == lastUpdate;
+      other is RuleMetadata && other.lastUpdate == lastUpdate;
 
   @override
   int get hashCode => lastUpdate.hashCode;
 
-  factory RecommendRuleMetadata.fromJson(Map<String, dynamic> json) =>
-      _$RecommendRuleMetadataFromJson(json);
+  factory RuleMetadata.fromJson(Map<String, dynamic> json) =>
+      _$RuleMetadataFromJson(json);
 
-  Map<String, dynamic> toJson() => _$RecommendRuleMetadataToJson(this);
+  Map<String, dynamic> toJson() => _$RuleMetadataToJson(this);
 
   @override
   String toString() {
