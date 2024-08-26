@@ -3,12 +3,12 @@
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'facets_stats.g.dart';
+part 'facet_stats.g.dart';
 
 @JsonSerializable()
-final class FacetsStats {
-  /// Returns a new [FacetsStats] instance.
-  const FacetsStats({
+final class FacetStats {
+  /// Returns a new [FacetStats] instance.
+  const FacetStats({
     this.min,
     this.max,
     this.avg,
@@ -34,7 +34,7 @@ final class FacetsStats {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is FacetsStats &&
+      other is FacetStats &&
           other.min == min &&
           other.max == max &&
           other.avg == avg &&
@@ -43,10 +43,10 @@ final class FacetsStats {
   @override
   int get hashCode => min.hashCode + max.hashCode + avg.hashCode + sum.hashCode;
 
-  factory FacetsStats.fromJson(Map<String, dynamic> json) =>
-      _$FacetsStatsFromJson(json);
+  factory FacetStats.fromJson(Map<String, dynamic> json) =>
+      _$FacetStatsFromJson(json);
 
-  Map<String, dynamic> toJson() => _$FacetsStatsToJson(this);
+  Map<String, dynamic> toJson() => _$FacetStatsToJson(this);
 
   @override
   String toString() {

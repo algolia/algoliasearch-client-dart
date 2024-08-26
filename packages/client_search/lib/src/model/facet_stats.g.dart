@@ -1,16 +1,16 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'facets_stats.dart';
+part of 'facet_stats.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-FacetsStats _$FacetsStatsFromJson(Map<String, dynamic> json) => $checkedCreate(
-      'FacetsStats',
+FacetStats _$FacetStatsFromJson(Map<String, dynamic> json) => $checkedCreate(
+      'FacetStats',
       json,
       ($checkedConvert) {
-        final val = FacetsStats(
+        final val = FacetStats(
           min: $checkedConvert('min', (v) => (v as num?)?.toDouble()),
           max: $checkedConvert('max', (v) => (v as num?)?.toDouble()),
           avg: $checkedConvert('avg', (v) => (v as num?)?.toDouble()),
@@ -20,7 +20,7 @@ FacetsStats _$FacetsStatsFromJson(Map<String, dynamic> json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$FacetsStatsToJson(FacetsStats instance) {
+Map<String, dynamic> _$FacetStatsToJson(FacetStats instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
