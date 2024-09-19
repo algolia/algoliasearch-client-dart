@@ -1,25 +1,24 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'semantic_search.dart';
+part of 'search_params_string.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-SemanticSearch _$SemanticSearchFromJson(Map<String, dynamic> json) =>
+SearchParamsString _$SearchParamsStringFromJson(Map<String, dynamic> json) =>
     $checkedCreate(
-      'SemanticSearch',
+      'SearchParamsString',
       json,
       ($checkedConvert) {
-        final val = SemanticSearch(
-          eventSources: $checkedConvert('eventSources',
-              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+        final val = SearchParamsString(
+          params: $checkedConvert('params', (v) => v as String?),
         );
         return val;
       },
     );
 
-Map<String, dynamic> _$SemanticSearchToJson(SemanticSearch instance) {
+Map<String, dynamic> _$SearchParamsStringToJson(SearchParamsString instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -28,6 +27,6 @@ Map<String, dynamic> _$SemanticSearchToJson(SemanticSearch instance) {
     }
   }
 
-  writeNotNull('eventSources', instance.eventSources);
+  writeNotNull('params', instance.params);
   return val;
 }

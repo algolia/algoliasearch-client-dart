@@ -1,18 +1,18 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'base_search_params.dart';
+part of 'base_recommend_search_params.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-BaseSearchParams _$BaseSearchParamsFromJson(Map<String, dynamic> json) =>
+BaseRecommendSearchParams _$BaseRecommendSearchParamsFromJson(
+        Map<String, dynamic> json) =>
     $checkedCreate(
-      'BaseSearchParams',
+      'BaseRecommendSearchParams',
       json,
       ($checkedConvert) {
-        final val = BaseSearchParams(
-          query: $checkedConvert('query', (v) => v as String?),
+        final val = BaseRecommendSearchParams(
           similarQuery: $checkedConvert('similarQuery', (v) => v as String?),
           filters: $checkedConvert('filters', (v) => v as String?),
           facetFilters: $checkedConvert('facetFilters', (v) => v),
@@ -28,9 +28,6 @@ BaseSearchParams _$BaseSearchParamsFromJson(Map<String, dynamic> json) =>
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
           facetingAfterDistinct:
               $checkedConvert('facetingAfterDistinct', (v) => v as bool?),
-          page: $checkedConvert('page', (v) => (v as num?)?.toInt()),
-          offset: $checkedConvert('offset', (v) => (v as num?)?.toInt()),
-          length: $checkedConvert('length', (v) => (v as num?)?.toInt()),
           aroundLatLng: $checkedConvert('aroundLatLng', (v) => v as String?),
           aroundLatLngViaIP:
               $checkedConvert('aroundLatLngViaIP', (v) => v as bool?),
@@ -76,7 +73,8 @@ BaseSearchParams _$BaseSearchParamsFromJson(Map<String, dynamic> json) =>
       },
     );
 
-Map<String, dynamic> _$BaseSearchParamsToJson(BaseSearchParams instance) {
+Map<String, dynamic> _$BaseRecommendSearchParamsToJson(
+    BaseRecommendSearchParams instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -85,7 +83,6 @@ Map<String, dynamic> _$BaseSearchParamsToJson(BaseSearchParams instance) {
     }
   }
 
-  writeNotNull('query', instance.query);
   writeNotNull('similarQuery', instance.similarQuery);
   writeNotNull('filters', instance.filters);
   writeNotNull('facetFilters', instance.facetFilters);
@@ -97,9 +94,6 @@ Map<String, dynamic> _$BaseSearchParamsToJson(BaseSearchParams instance) {
       'restrictSearchableAttributes', instance.restrictSearchableAttributes);
   writeNotNull('facets', instance.facets);
   writeNotNull('facetingAfterDistinct', instance.facetingAfterDistinct);
-  writeNotNull('page', instance.page);
-  writeNotNull('offset', instance.offset);
-  writeNotNull('length', instance.length);
   writeNotNull('aroundLatLng', instance.aroundLatLng);
   writeNotNull('aroundLatLngViaIP', instance.aroundLatLngViaIP);
   writeNotNull('aroundRadius', instance.aroundRadius);

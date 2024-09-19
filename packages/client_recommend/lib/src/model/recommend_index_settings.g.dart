@@ -1,23 +1,64 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'index_settings_as_search_params.dart';
+part of 'recommend_index_settings.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-IndexSettingsAsSearchParams _$IndexSettingsAsSearchParamsFromJson(
+RecommendIndexSettings _$RecommendIndexSettingsFromJson(
         Map<String, dynamic> json) =>
     $checkedCreate(
-      'IndexSettingsAsSearchParams',
+      'RecommendIndexSettings',
       json,
       ($checkedConvert) {
-        final val = IndexSettingsAsSearchParams(
+        final val = RecommendIndexSettings(
+          attributesForFaceting: $checkedConvert('attributesForFaceting',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          replicas: $checkedConvert('replicas',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          paginationLimitedTo: $checkedConvert(
+              'paginationLimitedTo', (v) => (v as num?)?.toInt()),
+          unretrievableAttributes: $checkedConvert('unretrievableAttributes',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          disableTypoToleranceOnWords: $checkedConvert(
+              'disableTypoToleranceOnWords',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          attributesToTransliterate: $checkedConvert(
+              'attributesToTransliterate',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          camelCaseAttributes: $checkedConvert('camelCaseAttributes',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          decompoundedAttributes:
+              $checkedConvert('decompoundedAttributes', (v) => v),
+          indexLanguages: $checkedConvert(
+              'indexLanguages',
+              (v) => (v as List<dynamic>?)
+                  ?.map((e) => $enumDecode(_$SupportedLanguageEnumMap, e))
+                  .toList()),
+          disablePrefixOnAttributes: $checkedConvert(
+              'disablePrefixOnAttributes',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          allowCompressionOfIntegerArray: $checkedConvert(
+              'allowCompressionOfIntegerArray', (v) => v as bool?),
+          numericAttributesForFiltering: $checkedConvert(
+              'numericAttributesForFiltering',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          separatorsToIndex:
+              $checkedConvert('separatorsToIndex', (v) => v as String?),
+          searchableAttributes: $checkedConvert('searchableAttributes',
+              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
+          userData: $checkedConvert('userData', (v) => v),
+          customNormalization: $checkedConvert(
+              'customNormalization',
+              (v) => (v as Map<String, dynamic>?)?.map(
+                    (k, e) => MapEntry(k, Map<String, String>.from(e as Map)),
+                  )),
+          attributeForDistinct:
+              $checkedConvert('attributeForDistinct', (v) => v as String?),
           attributesToRetrieve: $checkedConvert('attributesToRetrieve',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
           ranking: $checkedConvert('ranking',
-              (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
-          customRanking: $checkedConvert('customRanking',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
           relevancyStrictness: $checkedConvert(
               'relevancyStrictness', (v) => (v as num?)?.toInt()),
@@ -33,8 +74,6 @@ IndexSettingsAsSearchParams _$IndexSettingsAsSearchParamsFromJson(
               $checkedConvert('snippetEllipsisText', (v) => v as String?),
           restrictHighlightAndSnippetArrays: $checkedConvert(
               'restrictHighlightAndSnippetArrays', (v) => v as bool?),
-          hitsPerPage:
-              $checkedConvert('hitsPerPage', (v) => (v as num?)?.toInt()),
           minWordSizefor1Typo: $checkedConvert(
               'minWordSizefor1Typo', (v) => (v as num?)?.toInt()),
           minWordSizefor2Typos: $checkedConvert(
@@ -47,8 +86,6 @@ IndexSettingsAsSearchParams _$IndexSettingsAsSearchParamsFromJson(
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
           ignorePlurals: $checkedConvert('ignorePlurals', (v) => v),
           removeStopWords: $checkedConvert('removeStopWords', (v) => v),
-          keepDiacriticsOnCharacters: $checkedConvert(
-              'keepDiacriticsOnCharacters', (v) => v as String?),
           queryLanguages: $checkedConvert(
               'queryLanguages',
               (v) => (v as List<dynamic>?)
@@ -63,13 +100,6 @@ IndexSettingsAsSearchParams _$IndexSettingsAsSearchParamsFromJson(
               'queryType', (v) => $enumDecodeNullable(_$QueryTypeEnumMap, v)),
           removeWordsIfNoResults: $checkedConvert('removeWordsIfNoResults',
               (v) => $enumDecodeNullable(_$RemoveWordsIfNoResultsEnumMap, v)),
-          mode: $checkedConvert(
-              'mode', (v) => $enumDecodeNullable(_$ModeEnumMap, v)),
-          semanticSearch: $checkedConvert(
-              'semanticSearch',
-              (v) => v == null
-                  ? null
-                  : SemanticSearch.fromJson(v as Map<String, dynamic>)),
           advancedSyntax: $checkedConvert('advancedSyntax', (v) => v as bool?),
           optionalWords: $checkedConvert('optionalWords',
               (v) => (v as List<dynamic>?)?.map((e) => e as String).toList()),
@@ -116,8 +146,8 @@ IndexSettingsAsSearchParams _$IndexSettingsAsSearchParamsFromJson(
       },
     );
 
-Map<String, dynamic> _$IndexSettingsAsSearchParamsToJson(
-    IndexSettingsAsSearchParams instance) {
+Map<String, dynamic> _$RecommendIndexSettingsToJson(
+    RecommendIndexSettings instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
@@ -126,9 +156,29 @@ Map<String, dynamic> _$IndexSettingsAsSearchParamsToJson(
     }
   }
 
+  writeNotNull('attributesForFaceting', instance.attributesForFaceting);
+  writeNotNull('replicas', instance.replicas);
+  writeNotNull('paginationLimitedTo', instance.paginationLimitedTo);
+  writeNotNull('unretrievableAttributes', instance.unretrievableAttributes);
+  writeNotNull(
+      'disableTypoToleranceOnWords', instance.disableTypoToleranceOnWords);
+  writeNotNull('attributesToTransliterate', instance.attributesToTransliterate);
+  writeNotNull('camelCaseAttributes', instance.camelCaseAttributes);
+  writeNotNull('decompoundedAttributes', instance.decompoundedAttributes);
+  writeNotNull('indexLanguages',
+      instance.indexLanguages?.map((e) => e.toJson()).toList());
+  writeNotNull('disablePrefixOnAttributes', instance.disablePrefixOnAttributes);
+  writeNotNull('allowCompressionOfIntegerArray',
+      instance.allowCompressionOfIntegerArray);
+  writeNotNull(
+      'numericAttributesForFiltering', instance.numericAttributesForFiltering);
+  writeNotNull('separatorsToIndex', instance.separatorsToIndex);
+  writeNotNull('searchableAttributes', instance.searchableAttributes);
+  writeNotNull('userData', instance.userData);
+  writeNotNull('customNormalization', instance.customNormalization);
+  writeNotNull('attributeForDistinct', instance.attributeForDistinct);
   writeNotNull('attributesToRetrieve', instance.attributesToRetrieve);
   writeNotNull('ranking', instance.ranking);
-  writeNotNull('customRanking', instance.customRanking);
   writeNotNull('relevancyStrictness', instance.relevancyStrictness);
   writeNotNull('attributesToHighlight', instance.attributesToHighlight);
   writeNotNull('attributesToSnippet', instance.attributesToSnippet);
@@ -137,7 +187,6 @@ Map<String, dynamic> _$IndexSettingsAsSearchParamsToJson(
   writeNotNull('snippetEllipsisText', instance.snippetEllipsisText);
   writeNotNull('restrictHighlightAndSnippetArrays',
       instance.restrictHighlightAndSnippetArrays);
-  writeNotNull('hitsPerPage', instance.hitsPerPage);
   writeNotNull('minWordSizefor1Typo', instance.minWordSizefor1Typo);
   writeNotNull('minWordSizefor2Typos', instance.minWordSizefor2Typos);
   writeNotNull('typoTolerance', instance.typoTolerance);
@@ -146,8 +195,6 @@ Map<String, dynamic> _$IndexSettingsAsSearchParamsToJson(
       instance.disableTypoToleranceOnAttributes);
   writeNotNull('ignorePlurals', instance.ignorePlurals);
   writeNotNull('removeStopWords', instance.removeStopWords);
-  writeNotNull(
-      'keepDiacriticsOnCharacters', instance.keepDiacriticsOnCharacters);
   writeNotNull('queryLanguages',
       instance.queryLanguages?.map((e) => e.toJson()).toList());
   writeNotNull('decompoundQuery', instance.decompoundQuery);
@@ -156,8 +203,6 @@ Map<String, dynamic> _$IndexSettingsAsSearchParamsToJson(
   writeNotNull('queryType', instance.queryType?.toJson());
   writeNotNull(
       'removeWordsIfNoResults', instance.removeWordsIfNoResults?.toJson());
-  writeNotNull('mode', instance.mode?.toJson());
-  writeNotNull('semanticSearch', instance.semanticSearch?.toJson());
   writeNotNull('advancedSyntax', instance.advancedSyntax);
   writeNotNull('optionalWords', instance.optionalWords);
   writeNotNull('disableExactOnAttributes', instance.disableExactOnAttributes);
@@ -265,11 +310,6 @@ const _$RemoveWordsIfNoResultsEnumMap = {
   RemoveWordsIfNoResults.lastWords: 'lastWords',
   RemoveWordsIfNoResults.firstWords: 'firstWords',
   RemoveWordsIfNoResults.allOptional: 'allOptional',
-};
-
-const _$ModeEnumMap = {
-  Mode.neuralSearch: 'neuralSearch',
-  Mode.keywordSearch: 'keywordSearch',
 };
 
 const _$ExactOnSingleWordQueryEnumMap = {

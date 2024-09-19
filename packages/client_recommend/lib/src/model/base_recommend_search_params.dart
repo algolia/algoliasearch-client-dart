@@ -4,12 +4,12 @@ import 'package:algolia_client_recommend/src/model/supported_language.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'base_search_params_without_query.g.dart';
+part 'base_recommend_search_params.g.dart';
 
 @JsonSerializable()
-final class BaseSearchParamsWithoutQuery {
-  /// Returns a new [BaseSearchParamsWithoutQuery] instance.
-  const BaseSearchParamsWithoutQuery({
+final class BaseRecommendSearchParams {
+  /// Returns a new [BaseRecommendSearchParams] instance.
+  const BaseRecommendSearchParams({
     this.similarQuery,
     this.filters,
     this.facetFilters,
@@ -20,9 +20,6 @@ final class BaseSearchParamsWithoutQuery {
     this.restrictSearchableAttributes,
     this.facets,
     this.facetingAfterDistinct,
-    this.page,
-    this.offset,
-    this.length,
     this.aroundLatLng,
     this.aroundLatLngViaIP,
     this.aroundRadius,
@@ -94,21 +91,6 @@ final class BaseSearchParamsWithoutQuery {
   /// Whether faceting should be applied after deduplication with `distinct`.  This leads to accurate facet counts when using faceting in combination with `distinct`. It's usually better to use `afterDistinct` modifiers in the `attributesForFaceting` setting, as `facetingAfterDistinct` only computes correct facet counts if all records have the same facet values for the `attributeForDistinct`.
   @JsonKey(name: r'facetingAfterDistinct')
   final bool? facetingAfterDistinct;
-
-  /// Page of search results to retrieve.
-  // minimum: 0
-  @JsonKey(name: r'page')
-  final int? page;
-
-  /// Position of the first hit to retrieve.
-  @JsonKey(name: r'offset')
-  final int? offset;
-
-  /// Number of hits to retrieve (used in combination with `offset`).
-  // minimum: 0
-  // maximum: 1000
-  @JsonKey(name: r'length')
-  final int? length;
 
   /// Coordinates for the center of a circle, expressed as a comma-separated string of latitude and longitude.  Only records included within circle around this central location are included in the results. The radius of the circle is determined by the `aroundRadius` and `minimumAroundRadius` settings. This parameter is ignored if you also specify `insidePolygon` or `insideBoundingBox`.
   @JsonKey(name: r'aroundLatLng')
@@ -192,7 +174,7 @@ final class BaseSearchParamsWithoutQuery {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is BaseSearchParamsWithoutQuery &&
+      other is BaseRecommendSearchParams &&
           other.similarQuery == similarQuery &&
           other.filters == filters &&
           other.facetFilters == facetFilters &&
@@ -203,9 +185,6 @@ final class BaseSearchParamsWithoutQuery {
           other.restrictSearchableAttributes == restrictSearchableAttributes &&
           other.facets == facets &&
           other.facetingAfterDistinct == facetingAfterDistinct &&
-          other.page == page &&
-          other.offset == offset &&
-          other.length == length &&
           other.aroundLatLng == aroundLatLng &&
           other.aroundLatLngViaIP == aroundLatLngViaIP &&
           other.aroundRadius == aroundRadius &&
@@ -237,9 +216,6 @@ final class BaseSearchParamsWithoutQuery {
       restrictSearchableAttributes.hashCode +
       facets.hashCode +
       facetingAfterDistinct.hashCode +
-      page.hashCode +
-      offset.hashCode +
-      length.hashCode +
       aroundLatLng.hashCode +
       aroundLatLngViaIP.hashCode +
       aroundRadius.hashCode +
@@ -259,10 +235,10 @@ final class BaseSearchParamsWithoutQuery {
       percentileComputation.hashCode +
       enableABTest.hashCode;
 
-  factory BaseSearchParamsWithoutQuery.fromJson(Map<String, dynamic> json) =>
-      _$BaseSearchParamsWithoutQueryFromJson(json);
+  factory BaseRecommendSearchParams.fromJson(Map<String, dynamic> json) =>
+      _$BaseRecommendSearchParamsFromJson(json);
 
-  Map<String, dynamic> toJson() => _$BaseSearchParamsWithoutQueryToJson(this);
+  Map<String, dynamic> toJson() => _$BaseRecommendSearchParamsToJson(this);
 
   @override
   String toString() {
