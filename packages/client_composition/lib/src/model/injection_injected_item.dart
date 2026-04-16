@@ -4,12 +4,12 @@ import 'package:algolia_client_composition/src/model/injected_item_metadata.dart
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'injected_item.g.dart';
+part 'injection_injected_item.g.dart';
 
 @JsonSerializable()
-final class InjectedItem {
-  /// Returns a new [InjectedItem] instance.
-  const InjectedItem({
+final class InjectionInjectedItem {
+  /// Returns a new [InjectionInjectedItem] instance.
+  const InjectionInjectedItem({
     required this.key,
     required this.source,
     required this.position,
@@ -22,18 +22,18 @@ final class InjectedItem {
   final String key;
 
   /// One of types:
-  /// - [SearchSource]
-  /// - [ExternalSource]
+  /// - [InjectedItemExternalSource]
+  /// - [InjectedItemSearchSource]
   @JsonKey(name: r'source')
   final dynamic source;
 
   // minimum: 0
-  // maximum: 19
+  // maximum: 99
   @JsonKey(name: r'position')
   final int position;
 
   // minimum: 0
-  // maximum: 20
+  // maximum: 50
   @JsonKey(name: r'length')
   final int length;
 
@@ -43,7 +43,7 @@ final class InjectedItem {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is InjectedItem &&
+      other is InjectionInjectedItem &&
           other.key == key &&
           other.source == source &&
           other.position == position &&
@@ -58,10 +58,10 @@ final class InjectedItem {
       length.hashCode +
       metadata.hashCode;
 
-  factory InjectedItem.fromJson(Map<String, dynamic> json) =>
-      _$InjectedItemFromJson(json);
+  factory InjectionInjectedItem.fromJson(Map<String, dynamic> json) =>
+      _$InjectionInjectedItemFromJson(json);
 
-  Map<String, dynamic> toJson() => _$InjectedItemToJson(this);
+  Map<String, dynamic> toJson() => _$InjectionInjectedItemToJson(this);
 
   @override
   String toString() {

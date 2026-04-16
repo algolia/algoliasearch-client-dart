@@ -1,32 +1,34 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'composition_source_search.dart';
+part of 'injected_item_external.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-CompositionSourceSearch _$CompositionSourceSearchFromJson(
+InjectedItemExternal _$InjectedItemExternalFromJson(
         Map<String, dynamic> json) =>
     $checkedCreate(
-      'CompositionSourceSearch',
+      'InjectedItemExternal',
       json,
       ($checkedConvert) {
-        final val = CompositionSourceSearch(
+        final val = InjectedItemExternal(
           index: $checkedConvert('index', (v) => v as String),
           params: $checkedConvert(
               'params',
               (v) => v == null
                   ? null
-                  : MainInjectionQueryParameters.fromJson(
+                  : BaseInjectionQueryParameters.fromJson(
                       v as Map<String, dynamic>)),
+          ordering: $checkedConvert('ordering',
+              (v) => $enumDecodeNullable(_$ExternalOrderingEnumMap, v)),
         );
         return val;
       },
     );
 
-Map<String, dynamic> _$CompositionSourceSearchToJson(
-    CompositionSourceSearch instance) {
+Map<String, dynamic> _$InjectedItemExternalToJson(
+    InjectedItemExternal instance) {
   final val = <String, dynamic>{
     'index': instance.index,
   };
@@ -38,5 +40,11 @@ Map<String, dynamic> _$CompositionSourceSearchToJson(
   }
 
   writeNotNull('params', instance.params?.toJson());
+  writeNotNull('ordering', instance.ordering?.toJson());
   return val;
 }
+
+const _$ExternalOrderingEnumMap = {
+  ExternalOrdering.default_: 'default',
+  ExternalOrdering.userDefined: 'userDefined',
+};

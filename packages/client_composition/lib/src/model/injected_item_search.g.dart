@@ -1,16 +1,17 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'search.dart';
+part of 'injected_item_search.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Search _$SearchFromJson(Map<String, dynamic> json) => $checkedCreate(
-      'Search',
+InjectedItemSearch _$InjectedItemSearchFromJson(Map<String, dynamic> json) =>
+    $checkedCreate(
+      'InjectedItemSearch',
       json,
       ($checkedConvert) {
-        final val = Search(
+        final val = InjectedItemSearch(
           index: $checkedConvert('index', (v) => v as String),
           params: $checkedConvert(
               'params',
@@ -23,7 +24,7 @@ Search _$SearchFromJson(Map<String, dynamic> json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$SearchToJson(Search instance) {
+Map<String, dynamic> _$InjectedItemSearchToJson(InjectedItemSearch instance) {
   final val = <String, dynamic>{
     'index': instance.index,
   };

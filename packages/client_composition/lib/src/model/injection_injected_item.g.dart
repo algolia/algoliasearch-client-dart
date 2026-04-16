@@ -1,17 +1,18 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'injected_item.dart';
+part of 'injection_injected_item.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-InjectedItem _$InjectedItemFromJson(Map<String, dynamic> json) =>
+InjectionInjectedItem _$InjectionInjectedItemFromJson(
+        Map<String, dynamic> json) =>
     $checkedCreate(
-      'InjectedItem',
+      'InjectionInjectedItem',
       json,
       ($checkedConvert) {
-        final val = InjectedItem(
+        final val = InjectionInjectedItem(
           key: $checkedConvert('key', (v) => v as String),
           source: $checkedConvert('source', (v) => v),
           position: $checkedConvert('position', (v) => (v as num).toInt()),
@@ -26,7 +27,8 @@ InjectedItem _$InjectedItemFromJson(Map<String, dynamic> json) =>
       },
     );
 
-Map<String, dynamic> _$InjectedItemToJson(InjectedItem instance) {
+Map<String, dynamic> _$InjectionInjectedItemToJson(
+    InjectionInjectedItem instance) {
   final val = <String, dynamic>{
     'key': instance.key,
   };

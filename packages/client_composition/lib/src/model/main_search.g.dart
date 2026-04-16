@@ -1,31 +1,29 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'external.dart';
+part of 'main_search.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-External _$ExternalFromJson(Map<String, dynamic> json) => $checkedCreate(
-      'External',
+MainSearch _$MainSearchFromJson(Map<String, dynamic> json) => $checkedCreate(
+      'MainSearch',
       json,
       ($checkedConvert) {
-        final val = External(
+        final val = MainSearch(
           index: $checkedConvert('index', (v) => v as String),
           params: $checkedConvert(
               'params',
               (v) => v == null
                   ? null
-                  : BaseInjectionQueryParameters.fromJson(
+                  : MainInjectionQueryParameters.fromJson(
                       v as Map<String, dynamic>)),
-          ordering: $checkedConvert('ordering',
-              (v) => $enumDecodeNullable(_$ExternalOrderingEnumMap, v)),
         );
         return val;
       },
     );
 
-Map<String, dynamic> _$ExternalToJson(External instance) {
+Map<String, dynamic> _$MainSearchToJson(MainSearch instance) {
   final val = <String, dynamic>{
     'index': instance.index,
   };
@@ -37,11 +35,5 @@ Map<String, dynamic> _$ExternalToJson(External instance) {
   }
 
   writeNotNull('params', instance.params?.toJson());
-  writeNotNull('ordering', instance.ordering?.toJson());
   return val;
 }
-
-const _$ExternalOrderingEnumMap = {
-  ExternalOrdering.default_: 'default',
-  ExternalOrdering.userDefined: 'userDefined',
-};

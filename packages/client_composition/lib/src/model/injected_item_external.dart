@@ -5,12 +5,12 @@ import 'package:algolia_client_composition/src/model/external_ordering.dart';
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'external.g.dart';
+part 'injected_item_external.g.dart';
 
 @JsonSerializable()
-final class External {
-  /// Returns a new [External] instance.
-  const External({
+final class InjectedItemExternal {
+  /// Returns a new [InjectedItemExternal] instance.
+  const InjectedItemExternal({
     required this.index,
     this.params,
     this.ordering,
@@ -29,7 +29,7 @@ final class External {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is External &&
+      other is InjectedItemExternal &&
           other.index == index &&
           other.params == params &&
           other.ordering == ordering;
@@ -37,10 +37,10 @@ final class External {
   @override
   int get hashCode => index.hashCode + params.hashCode + ordering.hashCode;
 
-  factory External.fromJson(Map<String, dynamic> json) =>
-      _$ExternalFromJson(json);
+  factory InjectedItemExternal.fromJson(Map<String, dynamic> json) =>
+      _$InjectedItemExternalFromJson(json);
 
-  Map<String, dynamic> toJson() => _$ExternalToJson(this);
+  Map<String, dynamic> toJson() => _$InjectedItemExternalToJson(this);
 
   @override
   String toString() {
