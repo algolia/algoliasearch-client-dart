@@ -11,7 +11,7 @@ environment:
   sdk: '>=3.0.0 <4.0.0'
 dependencies:
   archive: ^4.0.9
-  dio: ^5.2.1
+  dio: ^5.10.0
   web: ^1.1.1
 dev_dependencies:
   lints: ^6.0.0
