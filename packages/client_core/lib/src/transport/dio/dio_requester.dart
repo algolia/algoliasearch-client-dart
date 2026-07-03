@@ -70,6 +70,7 @@ class DioRequester implements Requester {
         case DioExceptionType.connectionTimeout:
         case DioExceptionType.sendTimeout:
         case DioExceptionType.receiveTimeout:
+        case DioExceptionType.transformTimeout:
           throw AlgoliaTimeoutException(e);
         case DioExceptionType.badResponse:
           throw AlgoliaApiException(
