@@ -4,17 +4,17 @@ import 'package:algolia_client_composition/src/model/main_injection_query_parame
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'main_search.g.dart';
+part 'injection_main_search.g.dart';
 
 @JsonSerializable()
-final class MainSearch {
-  /// Returns a new [MainSearch] instance.
-  const MainSearch({
+final class InjectionMainSearch {
+  /// Returns a new [InjectionMainSearch] instance.
+  const InjectionMainSearch({
     required this.index,
     this.params,
   });
 
-  /// Index to retrieve search results from.
+  /// Algolia index used to retrieve records.
   @JsonKey(name: r'index')
   final String index;
 
@@ -24,15 +24,17 @@ final class MainSearch {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is MainSearch && other.index == index && other.params == params;
+      other is InjectionMainSearch &&
+          other.index == index &&
+          other.params == params;
 
   @override
   int get hashCode => index.hashCode + params.hashCode;
 
-  factory MainSearch.fromJson(Map<String, dynamic> json) =>
-      _$MainSearchFromJson(json);
+  factory InjectionMainSearch.fromJson(Map<String, dynamic> json) =>
+      _$InjectionMainSearchFromJson(json);
 
-  Map<String, dynamic> toJson() => _$MainSearchToJson(this);
+  Map<String, dynamic> toJson() => _$InjectionMainSearchToJson(this);
 
   @override
   String toString() {

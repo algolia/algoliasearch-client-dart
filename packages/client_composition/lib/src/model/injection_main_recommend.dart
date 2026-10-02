@@ -5,12 +5,12 @@ import 'package:algolia_client_composition/src/model/main_injection_query_parame
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'main_recommend.g.dart';
+part 'injection_main_recommend.g.dart';
 
 @JsonSerializable()
-final class MainRecommend {
-  /// Returns a new [MainRecommend] instance.
-  const MainRecommend({
+final class InjectionMainRecommend {
+  /// Returns a new [InjectionMainRecommend] instance.
+  const InjectionMainRecommend({
     required this.indexName,
     required this.model,
     required this.threshold,
@@ -40,7 +40,7 @@ final class MainRecommend {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is MainRecommend &&
+      other is InjectionMainRecommend &&
           other.indexName == indexName &&
           other.model == model &&
           other.threshold == threshold &&
@@ -55,10 +55,10 @@ final class MainRecommend {
       queryParameters.hashCode +
       fallbackParameters.hashCode;
 
-  factory MainRecommend.fromJson(Map<String, dynamic> json) =>
-      _$MainRecommendFromJson(json);
+  factory InjectionMainRecommend.fromJson(Map<String, dynamic> json) =>
+      _$InjectionMainRecommendFromJson(json);
 
-  Map<String, dynamic> toJson() => _$MainRecommendToJson(this);
+  Map<String, dynamic> toJson() => _$InjectionMainRecommendToJson(this);
 
   @override
   String toString() {

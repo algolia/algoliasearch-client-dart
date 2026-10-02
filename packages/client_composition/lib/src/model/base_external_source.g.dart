@@ -1,34 +1,26 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'injected_item_external.dart';
+part of 'base_external_source.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-InjectedItemExternal _$InjectedItemExternalFromJson(
-        Map<String, dynamic> json) =>
+BaseExternalSource _$BaseExternalSourceFromJson(Map<String, dynamic> json) =>
     $checkedCreate(
-      'InjectedItemExternal',
+      'BaseExternalSource',
       json,
       ($checkedConvert) {
-        final val = InjectedItemExternal(
+        final val = BaseExternalSource(
           index: $checkedConvert('index', (v) => v as String),
           ordering: $checkedConvert('ordering',
               (v) => $enumDecodeNullable(_$ExternalOrderingEnumMap, v)),
-          params: $checkedConvert(
-              'params',
-              (v) => v == null
-                  ? null
-                  : BaseInjectionQueryParameters.fromJson(
-                      v as Map<String, dynamic>)),
         );
         return val;
       },
     );
 
-Map<String, dynamic> _$InjectedItemExternalToJson(
-    InjectedItemExternal instance) {
+Map<String, dynamic> _$BaseExternalSourceToJson(BaseExternalSource instance) {
   final val = <String, dynamic>{
     'index': instance.index,
   };
@@ -40,7 +32,6 @@ Map<String, dynamic> _$InjectedItemExternalToJson(
   }
 
   writeNotNull('ordering', instance.ordering?.toJson());
-  writeNotNull('params', instance.params?.toJson());
   return val;
 }
 

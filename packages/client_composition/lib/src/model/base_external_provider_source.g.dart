@@ -1,18 +1,18 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'injected_item_external_provider.dart';
+part of 'base_external_provider_source.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-InjectedItemExternalProvider _$InjectedItemExternalProviderFromJson(
+BaseExternalProviderSource _$BaseExternalProviderSourceFromJson(
         Map<String, dynamic> json) =>
     $checkedCreate(
-      'InjectedItemExternalProvider',
+      'BaseExternalProviderSource',
       json,
       ($checkedConvert) {
-        final val = InjectedItemExternalProvider(
+        final val = BaseExternalProviderSource(
           index: $checkedConvert('index', (v) => v as String),
           configurationID:
               $checkedConvert('configurationID', (v) => v as String),
@@ -23,19 +23,13 @@ InjectedItemExternalProvider _$InjectedItemExternalProviderFromJson(
                   )),
           ordering: $checkedConvert('ordering',
               (v) => $enumDecodeNullable(_$ExternalProviderOrderingEnumMap, v)),
-          params: $checkedConvert(
-              'params',
-              (v) => v == null
-                  ? null
-                  : BaseInjectionQueryParameters.fromJson(
-                      v as Map<String, dynamic>)),
         );
         return val;
       },
     );
 
-Map<String, dynamic> _$InjectedItemExternalProviderToJson(
-    InjectedItemExternalProvider instance) {
+Map<String, dynamic> _$BaseExternalProviderSourceToJson(
+    BaseExternalProviderSource instance) {
   final val = <String, dynamic>{
     'index': instance.index,
     'configurationID': instance.configurationID,
@@ -49,7 +43,6 @@ Map<String, dynamic> _$InjectedItemExternalProviderToJson(
 
   writeNotNull('configurationParams', instance.configurationParams);
   writeNotNull('ordering', instance.ordering?.toJson());
-  writeNotNull('params', instance.params?.toJson());
   return val;
 }
 

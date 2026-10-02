@@ -1,16 +1,17 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'main_search.dart';
+part of 'injection_main_search.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-MainSearch _$MainSearchFromJson(Map<String, dynamic> json) => $checkedCreate(
-      'MainSearch',
+InjectionMainSearch _$InjectionMainSearchFromJson(Map<String, dynamic> json) =>
+    $checkedCreate(
+      'InjectionMainSearch',
       json,
       ($checkedConvert) {
-        final val = MainSearch(
+        final val = InjectionMainSearch(
           index: $checkedConvert('index', (v) => v as String),
           params: $checkedConvert(
               'params',
@@ -23,7 +24,7 @@ MainSearch _$MainSearchFromJson(Map<String, dynamic> json) => $checkedCreate(
       },
     );
 
-Map<String, dynamic> _$MainSearchToJson(MainSearch instance) {
+Map<String, dynamic> _$InjectionMainSearchToJson(InjectionMainSearch instance) {
   final val = <String, dynamic>{
     'index': instance.index,
   };

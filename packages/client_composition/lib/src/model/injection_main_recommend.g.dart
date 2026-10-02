@@ -1,16 +1,18 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'recommend.dart';
+part of 'injection_main_recommend.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-Recommend _$RecommendFromJson(Map<String, dynamic> json) => $checkedCreate(
-      'Recommend',
+InjectionMainRecommend _$InjectionMainRecommendFromJson(
+        Map<String, dynamic> json) =>
+    $checkedCreate(
+      'InjectionMainRecommend',
       json,
       ($checkedConvert) {
-        final val = Recommend(
+        final val = InjectionMainRecommend(
           indexName: $checkedConvert('indexName', (v) => v as String),
           model:
               $checkedConvert('model', (v) => $enumDecode(_$ModelEnumMap, v)),
@@ -19,20 +21,21 @@ Recommend _$RecommendFromJson(Map<String, dynamic> json) => $checkedCreate(
               'queryParameters',
               (v) => v == null
                   ? null
-                  : BaseInjectionQueryParameters.fromJson(
+                  : MainInjectionQueryParameters.fromJson(
                       v as Map<String, dynamic>)),
           fallbackParameters: $checkedConvert(
               'fallbackParameters',
               (v) => v == null
                   ? null
-                  : BaseInjectionQueryParameters.fromJson(
+                  : MainInjectionQueryParameters.fromJson(
                       v as Map<String, dynamic>)),
         );
         return val;
       },
     );
 
-Map<String, dynamic> _$RecommendToJson(Recommend instance) {
+Map<String, dynamic> _$InjectionMainRecommendToJson(
+    InjectionMainRecommend instance) {
   final val = <String, dynamic>{
     'indexName': instance.indexName,
     'model': instance.model.toJson(),

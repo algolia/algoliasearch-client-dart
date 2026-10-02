@@ -1,18 +1,18 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'main_external_provider.dart';
+part of 'injection_main_external_provider.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-MainExternalProvider _$MainExternalProviderFromJson(
+InjectionMainExternalProvider _$InjectionMainExternalProviderFromJson(
         Map<String, dynamic> json) =>
     $checkedCreate(
-      'MainExternalProvider',
+      'InjectionMainExternalProvider',
       json,
       ($checkedConvert) {
-        final val = MainExternalProvider(
+        final val = InjectionMainExternalProvider(
           index: $checkedConvert('index', (v) => v as String),
           configurationID:
               $checkedConvert('configurationID', (v) => v as String),
@@ -21,21 +21,21 @@ MainExternalProvider _$MainExternalProviderFromJson(
               (v) => (v as Map<String, dynamic>?)?.map(
                     (k, e) => MapEntry(k, e as Object),
                   )),
+          ordering: $checkedConvert('ordering',
+              (v) => $enumDecodeNullable(_$ExternalProviderOrderingEnumMap, v)),
           params: $checkedConvert(
               'params',
               (v) => v == null
                   ? null
                   : MainInjectionQueryParameters.fromJson(
                       v as Map<String, dynamic>)),
-          ordering: $checkedConvert('ordering',
-              (v) => $enumDecodeNullable(_$ExternalProviderOrderingEnumMap, v)),
         );
         return val;
       },
     );
 
-Map<String, dynamic> _$MainExternalProviderToJson(
-    MainExternalProvider instance) {
+Map<String, dynamic> _$InjectionMainExternalProviderToJson(
+    InjectionMainExternalProvider instance) {
   final val = <String, dynamic>{
     'index': instance.index,
     'configurationID': instance.configurationID,
@@ -48,8 +48,8 @@ Map<String, dynamic> _$MainExternalProviderToJson(
   }
 
   writeNotNull('configurationParams', instance.configurationParams);
-  writeNotNull('params', instance.params?.toJson());
   writeNotNull('ordering', instance.ordering?.toJson());
+  writeNotNull('params', instance.params?.toJson());
   return val;
 }
 
