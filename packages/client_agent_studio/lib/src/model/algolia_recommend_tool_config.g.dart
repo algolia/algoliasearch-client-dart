@@ -1,18 +1,18 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'algolia_recommend_tool_config_input.dart';
+part of 'algolia_recommend_tool_config.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-AlgoliaRecommendToolConfigInput _$AlgoliaRecommendToolConfigInputFromJson(
+AlgoliaRecommendToolConfig _$AlgoliaRecommendToolConfigFromJson(
         Map<String, dynamic> json) =>
     $checkedCreate(
-      'AlgoliaRecommendToolConfigInput',
+      'AlgoliaRecommendToolConfig',
       json,
       ($checkedConvert) {
-        final val = AlgoliaRecommendToolConfigInput(
+        final val = AlgoliaRecommendToolConfig(
           name: $checkedConvert('name', (v) => v as String),
           type: $checkedConvert('type', (v) => v as String),
           allowedConfigs: $checkedConvert(
@@ -31,8 +31,8 @@ AlgoliaRecommendToolConfigInput _$AlgoliaRecommendToolConfigInputFromJson(
       },
     );
 
-Map<String, dynamic> _$AlgoliaRecommendToolConfigInputToJson(
-    AlgoliaRecommendToolConfigInput instance) {
+Map<String, dynamic> _$AlgoliaRecommendToolConfigToJson(
+    AlgoliaRecommendToolConfig instance) {
   final val = <String, dynamic>{
     'name': instance.name,
     'type': instance.type,

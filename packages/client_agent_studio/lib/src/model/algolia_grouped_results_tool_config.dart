@@ -3,67 +3,82 @@
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'algolia_display_results_tool_config.g.dart';
+part 'algolia_grouped_results_tool_config.g.dart';
 
 @JsonSerializable()
-final class AlgoliaDisplayResultsToolConfig {
-  /// Returns a new [AlgoliaDisplayResultsToolConfig] instance.
-  const AlgoliaDisplayResultsToolConfig({
+final class AlgoliaGroupedResultsToolConfig {
+  /// Returns a new [AlgoliaGroupedResultsToolConfig] instance.
+  const AlgoliaGroupedResultsToolConfig({
     this.name,
-    required this.type,
+    this.isTerminal,
     this.minGroups,
     this.maxGroups,
     this.minResultsPerGroup,
     this.maxResultsPerGroup,
+    required this.type,
   });
 
   @JsonKey(name: r'name')
   final String? name;
 
-  @JsonKey(name: r'type')
-  final String type;
+  /// When true, a successful tool invocation ends the agent graph (no further LLM turn). Use for chat experiences where the tool payload IS the final response. Leave false to let the main LLM produce a concluding assistant message after the tool runs.
+  @JsonKey(name: r'isTerminal')
+  final bool? isTerminal;
 
+  /// Minimum number of result groups.
   // minimum: 1
+  // maximum: 6
   @JsonKey(name: r'minGroups')
   final int? minGroups;
 
+  /// Maximum number of result groups.
   // minimum: 1
+  // maximum: 6
   @JsonKey(name: r'maxGroups')
   final int? maxGroups;
 
+  /// Minimum hits per group.
   // minimum: 1
+  // maximum: 15
   @JsonKey(name: r'minResultsPerGroup')
   final int? minResultsPerGroup;
 
+  /// Maximum hits per group.
   // minimum: 1
+  // maximum: 15
   @JsonKey(name: r'maxResultsPerGroup')
   final int? maxResultsPerGroup;
+
+  @JsonKey(name: r'type')
+  final String type;
 
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is AlgoliaDisplayResultsToolConfig &&
+      other is AlgoliaGroupedResultsToolConfig &&
           other.name == name &&
-          other.type == type &&
+          other.isTerminal == isTerminal &&
           other.minGroups == minGroups &&
           other.maxGroups == maxGroups &&
           other.minResultsPerGroup == minResultsPerGroup &&
-          other.maxResultsPerGroup == maxResultsPerGroup;
+          other.maxResultsPerGroup == maxResultsPerGroup &&
+          other.type == type;
 
   @override
   int get hashCode =>
       name.hashCode +
-      type.hashCode +
+      isTerminal.hashCode +
       minGroups.hashCode +
       maxGroups.hashCode +
       minResultsPerGroup.hashCode +
-      maxResultsPerGroup.hashCode;
+      maxResultsPerGroup.hashCode +
+      type.hashCode;
 
-  factory AlgoliaDisplayResultsToolConfig.fromJson(Map<String, dynamic> json) =>
-      _$AlgoliaDisplayResultsToolConfigFromJson(json);
+  factory AlgoliaGroupedResultsToolConfig.fromJson(Map<String, dynamic> json) =>
+      _$AlgoliaGroupedResultsToolConfigFromJson(json);
 
   Map<String, dynamic> toJson() =>
-      _$AlgoliaDisplayResultsToolConfigToJson(this);
+      _$AlgoliaGroupedResultsToolConfigToJson(this);
 
   @override
   String toString() {

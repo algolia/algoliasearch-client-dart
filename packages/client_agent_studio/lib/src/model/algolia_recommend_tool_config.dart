@@ -4,12 +4,12 @@ import 'package:algolia_client_agent_studio/src/model/algolia_recommend_tool_ind
 
 import 'package:json_annotation/json_annotation.dart';
 
-part 'algolia_recommend_tool_config_input.g.dart';
+part 'algolia_recommend_tool_config.g.dart';
 
 @JsonSerializable()
-final class AlgoliaRecommendToolConfigInput {
-  /// Returns a new [AlgoliaRecommendToolConfigInput] instance.
-  const AlgoliaRecommendToolConfigInput({
+final class AlgoliaRecommendToolConfig {
+  /// Returns a new [AlgoliaRecommendToolConfig] instance.
+  const AlgoliaRecommendToolConfig({
     required this.name,
     required this.type,
     this.allowedConfigs,
@@ -31,7 +31,7 @@ final class AlgoliaRecommendToolConfigInput {
   @override
   bool operator ==(Object other) =>
       identical(this, other) ||
-      other is AlgoliaRecommendToolConfigInput &&
+      other is AlgoliaRecommendToolConfig &&
           other.name == name &&
           other.type == type &&
           other.allowedConfigs == allowedConfigs &&
@@ -44,11 +44,10 @@ final class AlgoliaRecommendToolConfigInput {
       allowedConfigs.hashCode +
       predefinedRecommendParameters.hashCode;
 
-  factory AlgoliaRecommendToolConfigInput.fromJson(Map<String, dynamic> json) =>
-      _$AlgoliaRecommendToolConfigInputFromJson(json);
+  factory AlgoliaRecommendToolConfig.fromJson(Map<String, dynamic> json) =>
+      _$AlgoliaRecommendToolConfigFromJson(json);
 
-  Map<String, dynamic> toJson() =>
-      _$AlgoliaRecommendToolConfigInputToJson(this);
+  Map<String, dynamic> toJson() => _$AlgoliaRecommendToolConfigToJson(this);
 
   @override
   String toString() {
